@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coworking Space Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos del modal */
+        .modal {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            z-index: 1; /* Aparece por encima de todo el contenido */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto; /* Centra el modal */
+            padding: 20px;
+            width: 50%; /* Ancho del modal */
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Estilos para los campos del formulario */
+        input[type="text"],
+        input[type="date"],
+        input[type="time"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Coworking Space</div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                
+                <li><a href="javascript:void(0)" id="myReservationsBtn">Mis reservas</a></li>
+
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="calendar">
+                <h2>Disponibidad de habitaciones</h2>
+                <div id="calendar"></div>
+            </section>
+
+            
+        </div>
+    </main>
+
+    <!-- Modal for "My Reservations" -->
+<div id="myReservationsModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>My Reservations</h2>
+        <form id="reservationsForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="date">Reservation Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="room">Room:</label>
+            <select id="room" name="room" required>
+                <option value="Room A">Room A</option>
+                <option value="Room B">Room B</option>
+                <option value="Room C">Room C</option>
+            </select>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <input type="submit" value="Save Reservation">
+        </form>
+    </div>
+</div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
