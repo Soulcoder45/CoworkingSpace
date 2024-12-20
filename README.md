@@ -11,8 +11,13 @@ A continuación, te mostramos los pasos necesarios para configurar este archivo.
 
 ## 1. Copiar el archivo `application.properties.example`
 
-Antes de comenzar, copia el archivo `application.properties.example` que se encuentra en el repositorio y renómbralo a `application.properties`. Esto se debe hacer para asegurar que el archivo de configuración no contenga datos sensibles en el repositorio.
+Antes de comenzar, copia el archivo `application.properties.example` que se encuentra en el repositorio y renómbralo a `application.properties`.
 
-## 2. Reemplazar por credenciales:
+## 2. Configurar el archivo `application.properties`
 
-"<host>","<puerto>","<nombre_base_de_datos>", "<usuario>" y "<contraseña>" se deben reemplazar por las credenciales que se pasaron por discord.
+Edita el archivo `application.properties` recién copiado y reemplaza los valores entre `< >` con las credenciales que se pasaron por discord:
+
+```properties
+spring.datasource.url=jdbc:mysql://<host>:<puerto>/<nombre_base_de_datos>
+spring.datasource.username=<usuario>
+spring.datasource.password=<contraseña>
