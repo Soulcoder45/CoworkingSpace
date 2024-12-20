@@ -15,4 +15,4 @@ Antes de comenzar, copia el archivo `application.properties.example` que se encu
 
 ## 2. Reemplazar por credenciales:
 
-<host>,<puerto>,<nombre_base_de_datos>, <usuario> y <contraseña> se deben reemplazar por las credenciales que se pasaron por discord.
+"<host>","<puerto>","<nombre_base_de_datos>", "<usuario>" y "<contraseña>" se deben reemplazar por las credenciales que se pasaron por discord.
